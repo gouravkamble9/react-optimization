@@ -9,6 +9,7 @@ const NavBar = () => {
                 <Link to='/memo'>Memo</Link>
                 <Link to='/callback'>Callback</Link>
                 <Link to='/debounce'>Debounce</Link>
+                <Link to='/throttle'>Throttle</Link>                
             </div>
         </div>
     )
