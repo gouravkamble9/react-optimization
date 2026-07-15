@@ -4,6 +4,8 @@ const Memo = () => {
     const [count, setCount] = useState(0)
     const [text, setText] = useState("")
 
+    console.log("Use memo")
+
     const expensiveCalculation = (num) => {
         console.log("Calculating...")
         for (let i = 0; i < 10000000; i++) { }

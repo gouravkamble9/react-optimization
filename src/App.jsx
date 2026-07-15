@@ -1,21 +1,23 @@
-import React from 'react'
-import ReactMemo from './react-memo/ReactMemo'
+import React, { Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import NavBar from './NavBar'
-import Memo from './memo/Memo'
-import Callback from './callback/Callback'
+
+const ReactMemo=React.lazy(()=>import("./react-memo/ReactMemo"))
+const Memo=React.lazy(()=>import("./memo/Memo"))
+const Callback=React.lazy(()=>import("./callback/Callback"))
 
 const App = () => {
   return (
     <div className='p-10'>
       <BrowserRouter>
       <NavBar/>
+      <Suspense fallback={<span>Loading...</span>}>
         <Routes>
           <Route path='/react-memo' element={<ReactMemo/>}/>
           <Route path='/memo' element={<Memo/>}/>
           <Route path='/callback' element={<Callback/>}/>
-          
         </Routes>
+        </Suspense>
       </BrowserRouter>
     </div>
   )

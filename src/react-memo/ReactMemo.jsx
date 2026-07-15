@@ -5,6 +5,8 @@ const ReactMemo = () => {
     const [data, setData] = useState(true)
     const [input, setInput] = useState("")
 
+    console.log("React Memo")
+
     return (
         <div className='flex flex-col w-1/4'>
             <span>ReactMemo</span>

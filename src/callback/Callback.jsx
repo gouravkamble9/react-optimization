@@ -5,6 +5,8 @@ const Callback = () => {
   const [count,setCount]=useState(0)
   const [text,setText]=useState("")
 
+  console.log("React Callback")
+
   const handleClick=useCallback(()=>{
     console.log("handleCLick")
     setCount((prev)=>prev+1)
