@@ -8,6 +8,7 @@ const NavBar = () => {
                 <Link to='/react-memo'>React Memo</Link>
                 <Link to='/memo'>Memo</Link>
                 <Link to='/callback'>Callback</Link>
+                <Link to='/debounce'>Debounce</Link>
             </div>
         </div>
     )
